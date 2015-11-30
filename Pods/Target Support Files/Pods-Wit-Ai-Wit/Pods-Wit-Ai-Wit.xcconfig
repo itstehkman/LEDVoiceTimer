@@ -1,0 +1,1 @@
+PODS_WIT_AI_WIT_OTHER_LDFLAGS = -framework "AudioToolbox" -framework "QuartzCore"
