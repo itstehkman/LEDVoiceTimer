@@ -1,3 +1,4 @@
+//this callback responds to any http req
 http.onrequest(function(request, response){
     
     local path = request.path;
@@ -20,6 +21,7 @@ http.onrequest(function(request, response){
     
 });
 
+/*------------------HELPER FUNCTIONS--------------*/
 function setTask(request, response, query){
     if(!("task" in query) || !("time" in query))
         return;

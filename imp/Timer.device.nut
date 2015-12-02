@@ -8,6 +8,8 @@ pixels <- WS2812(spi, NUMPIXELS);
 const MAX_TASKS = 5;
 local timer = null;
 
+//our most important variables
+//tasks is the table of tasks that are shown on the LEDs
 local tasks = {};
 local blinkNum = 0;
 local blinkOn = false;
@@ -16,6 +18,8 @@ local blinkOn = false;
 local startRange = 0;
 local endRange = 4;
 
+
+/*-----------------------------TASK CLASS-------------------*/
 //This class represents a single Task on the timer.
 class Task{
     
@@ -73,6 +77,8 @@ class Task{
 
 /*-----------HELPER FUNCTIONS---------------------------*/
 
+//must be called to start update
+//because the imp timer almost always has to be reset
 function updateInit(){
     if(timer != null)
        imp.cancelwakeup(timer);
@@ -101,7 +107,7 @@ function update(){
 function addTask(params){
     local taskName = params.task;
     local time = params.time.tointeger()*60*1000;
-    server.log(time);
+
     //find first empty spot
     for(local i = 0; i < MAX_TASKS; i++){
         if(!(i in tasks)){
@@ -134,6 +140,7 @@ function clearTasks(params){
     updateInit();
 }
 
+//set callback functions
 agent.on("set", addTask);
 agent.on("delete", deleteTask);
 agent.on("clear", clearTasks);

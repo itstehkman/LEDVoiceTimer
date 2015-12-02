@@ -55,6 +55,7 @@ UILabel *labelView;
     NSString *task = firstOutcome[@"entities"][@"task"][0][@"value"];
     NSString *time = firstOutcome[@"entities"][@"duration"][0][@"value"];
     
+    //set the label to the outcome
     labelView.text = [NSString stringWithFormat:@"%@: %@ %@", intent, task, time];
     [self.view addSubview:labelView];
     
@@ -63,6 +64,8 @@ UILabel *labelView;
         query = [NSString stringWithFormat:@"set?task=%@&time=%@", task, time];
     else if([intent isEqualToString:@"Delete_Task"] && task)
         query = [NSString stringWithFormat:@"delete?task=%@", task];
+    else if([intent isEqualToString:@"Clear"])
+        query = @"clear";
     else
         return;
     
