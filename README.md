@@ -27,14 +27,13 @@ pod install
 **How to use the voice commands**
 
 After you have run the iPhone app, the voice commands are a little tricky and limited because of the new Wit.ai project.
-To set a task:
-Say "[verb] the [task_item], [duration in minutes]"
-(Note: Wit.ai is still learning and I have trained it to respond to "Put the [task_item] in the [location], [duration in minutes]"
+To set a task:<br>
+Say "[verb] the [task_item], [duration in minutes]" <br>
+(Note: Wit.ai is still learning and I have also trained it to respond to "Put the [task_item] in the [location], [duration in minutes]")
   
 To delete a task:
 Say "[task_item] is done"
 
 
-
-Enjoy! An example video is soon to come.
+[You can see it in action here](https://www.dropbox.com/home?preview=20151201_113307.mp4). Enjoy!
 
