@@ -35,5 +35,5 @@ To delete a task:
 Say "[task_item] is done"
 
 
-[You can see it in action here](https://www.dropbox.com/home?preview=20151201_113307.mp4). Enjoy!
+[You can see it in action here](https://www.dropbox.com/s/t9sqwe0oh2lwz87/20151201_113307.mp4?dl=0). Enjoy!
 
